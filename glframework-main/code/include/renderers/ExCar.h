@@ -9,4 +9,7 @@ public:
 	~ExCar();
 	void render(float dt);
 private:
+	Program* program;
+	GLuint VAO;
+	GLuint VBO;
 };

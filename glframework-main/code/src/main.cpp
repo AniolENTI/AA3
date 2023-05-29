@@ -7,6 +7,7 @@
 
 #include <GL_framework.h>
 #include <renderers/ExPlacementTriangles.h>
+#include <renderers/ExCar.h>
 
 namespace {
 	const int expected_fps = 30;
@@ -72,7 +73,7 @@ int main(int argc, char** argv) {
 
 	// Init scene here
 	///////////////////////////////////////////////
-	Renderer *renderer = new ExPlacementTriangles(display_w, display_h);
+	Renderer *renderer = new ExCar(display_w, display_h);
 	///////////////////////////////////////////////
 	
 	// Setup ImGui binding
