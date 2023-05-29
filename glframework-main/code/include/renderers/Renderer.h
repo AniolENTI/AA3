@@ -4,6 +4,7 @@
 #include <glm\gtc\matrix_transform.hpp>
 #include <cstdio>
 #include <cassert>
+#include <vector>
 
 #include <imgui\imgui.h>
 #include <imgui\imgui_impl_sdl_gl3.h>
@@ -28,6 +29,7 @@ public:
 	void GLmousecb(MouseEvent ev);
 	void GLResize(int width, int height);
 	void GLrender(float dt);
+
 protected:
 	float FOV = glm::radians(65.f);
 	float zNear = 1.f;
@@ -48,5 +50,11 @@ protected:
 
 	virtual void render(float dt);
 	virtual void renderGUI();
+
+
+	//Coses carregar objecte
+	std::vector< glm::vec3 > vertices;
+	std::vector< glm::vec2 > uvs;
+	std::vector< glm::vec3 > normals;
 };
 
