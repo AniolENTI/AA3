@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\glframework-main"
+    "\\glframework-main",
+    "\\glframework-main\\code",
+    "\\glframework-main\\code\\src",
+    "\\glframework-main\\code\\src\\renderers"
   ],
-  "SelectedNode": "\\glframework-main\\GL_framework.sln",
+  "SelectedNode": "\\glframework-main\\code\\src\\renderers\\ExCar.cpp",
   "PreviewInSolutionExplorer": false
 }
