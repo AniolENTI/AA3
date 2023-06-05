@@ -163,8 +163,17 @@ xcopy "$(ProjectDir)libs\SDL2.dll" "$(OutDir)" /y /d</Command>
   </ItemGroup>
   <ItemGroup>
     <None Include="imgui.ini" />
+    <None Include="shaders\Axis.frag" />
+    <None Include="shaders\Axis.vert" />
+    <None Include="shaders\Cube.frag" />
+    <None Include="shaders\Cube.vert" />
+    <None Include="shaders\Texture.frag" />
+    <None Include="shaders\Texture.vert" />
     <None Include="shaders\triangle.frag" />
     <None Include="shaders\triangle.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\gotele.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -73,6 +73,6 @@ bool loadOBJ(
         glm::vec3 vertex = temp_vertices[vertexIndex - 1];
         out_vertices.push_back(vertex);
     }
-
+    printf("%d", vertexIndices.size());
     return true;
 }

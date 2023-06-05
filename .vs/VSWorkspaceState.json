@@ -3,9 +3,11 @@
     "",
     "\\glframework-main",
     "\\glframework-main\\code",
+    "\\glframework-main\\code\\include",
+    "\\glframework-main\\code\\include\\renderers",
     "\\glframework-main\\code\\src",
     "\\glframework-main\\code\\src\\renderers"
   ],
-  "SelectedNode": "\\glframework-main\\code\\src\\renderers\\ExCar.cpp",
+  "SelectedNode": "\\glframework-main\\code\\include\\renderers\\ExCar.h",
   "PreviewInSolutionExplorer": false
 }
