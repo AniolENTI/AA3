@@ -4,7 +4,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "imgui/stb_image.h"
 
-ExTexture::ExTexture(int width, int height, glm::vec3 topRight, glm::vec3 topLeft, glm::vec3 botLeft, glm::vec3 botRight, char* path) : Renderer(width, height)
+ExTexture::ExTexture(glm::vec3 topRight, glm::vec3 topLeft, glm::vec3 botLeft, glm::vec3 botRight, char* path)
 {
 	float vertices[]{
 		//Positions								//Texture coords
@@ -113,7 +113,7 @@ ExTexture::~ExTexture()
 	delete program;
 }
 
-void ExTexture::render(float dt)
+void ExTexture::draw()
 {
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glBindVertexArray(VAO);
@@ -126,21 +126,19 @@ void ExTexture::render(float dt)
 		program->getUniform("objMat"),
 		1, GL_FALSE, glm::value_ptr(objMat)
 	);
-	/*glUniformMatrix4fv(
-		program->getUniform("mv_Mat"),
-		1, GL_FALSE, glm::value_ptr(cam._modelView)
-	);*/
+
 	glUniformMatrix4fv(
 		program->getUniform("mvpMat"),
 		1, GL_FALSE, glm::value_ptr(cam._MVP)
 	);
-	/*glUniform4f(
-		program->getUniform("color"),
-		color.r, color.g, color.b, color.w
-	);*/
 
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 	program->unuse();
 	glBindVertexArray(0);
+}
+
+void ExTexture::setTransforms(CameraTransforms cam)
+{
+	this->cam = cam;
 }

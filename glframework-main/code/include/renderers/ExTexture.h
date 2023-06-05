@@ -1,13 +1,16 @@
 #pragma once
 #include "Renderer.h"
 #include <Program.h>
+#include <GL/glew.h>
+#include <glm\gtc\type_ptr.hpp>
 
-class ExTexture : public Renderer
+class ExTexture
 {
 public:
-	ExTexture(int width, int height, glm::vec3 topRight, glm::vec3 topLeft, glm::vec3 botLeft, glm::vec3 botRight, char* path);
+	ExTexture(glm::vec3 topRight, glm::vec3 topLeft, glm::vec3 botLeft, glm::vec3 botRight, char* path);
 	~ExTexture();
-	void render(float dt) override;
+	void setTransforms(CameraTransforms cam);
+	void draw();
 private:
 	GLuint VAO;
 	GLuint VBO;
@@ -16,4 +19,6 @@ private:
 	GLuint texture;
 
 	Program* program;
+
+	CameraTransforms cam;
 };
