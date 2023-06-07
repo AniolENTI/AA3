@@ -7,11 +7,11 @@
 ExTexture::ExTexture(glm::vec3 topRight, glm::vec3 topLeft, glm::vec3 botLeft, glm::vec3 botRight, char* path)
 {
 	float vertices[]{
-		//Positions								//Texture coords
-		 topRight.x,  topRight.y, topRight.z,	 1.0f,  1.0f,//top right
-		 topLeft.x,   topLeft.y,  topLeft.z,	-1.0f,  1.0f,//top left
-		 botRight.x,  botRight.y, botRight.z,	-1.0f, -1.0f,//bottom left
-		 botLeft.x,   botLeft.y,  botLeft.z,	 1.0f, -1.0f,//bottom right
+		//Positions									//Texture coords
+		 topRight.x,	topRight.y,		topRight.z,	 1.0f,  1.0f,//top right
+		 topLeft.x,		topLeft.y,		topLeft.z,	-1.0f,  1.0f,//top left
+		 botLeft.x,		botLeft.y,		botLeft.z,	-1.0f, -1.0f,//bottom left
+		 botRight.x,	botRight.y,		botRight.z,	 1.0f, -1.0f,//bottom right
 	};
 	unsigned int indices[]{
 		0, 1, 3, //upper triangle
