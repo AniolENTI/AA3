@@ -15,7 +15,8 @@ private:
 	Program* program;
 	GLuint VAO;
 	GLuint VBO;
-
+	float moviment = 1.0f;
+	float rotacio = 0.0f;
 
 	//PLA
 	ExTexture* texture;

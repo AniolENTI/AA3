@@ -91,11 +91,13 @@ void ExCar::render(float dt)
 		// Draw model
 		glUniform4f(colorLoc, 0.9f, 0.1f, 0.1f, 1.0f);
 		model = glm::rotate(glm::mat4(), glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-		view = glm::translate(glm::mat4(), glm::vec3(0.0f, -10.0f, -20.0f));
+		view = glm::translate(glm::mat4(), glm::vec3(0.0f - moviment, -10.0f, -20.0f));
 		objMat = view * model;
 		glUniformMatrix4fv(objMatLoc, 1, GL_FALSE, glm::value_ptr(objMat));
 		glUniformMatrix4fv(mvpMatLoc, 1, GL_FALSE, glm::value_ptr(cam._MVP));
 		glDrawArrays(GL_TRIANGLES, 0, 678424528);
+
+		moviment++;
 	}
 
 	//RENDER PLA
