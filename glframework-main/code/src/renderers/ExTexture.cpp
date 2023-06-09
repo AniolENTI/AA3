@@ -142,3 +142,8 @@ void ExTexture::setTransforms(CameraTransforms cam)
 {
 	this->cam = cam;
 }
+
+void ExTexture::forceChangeTexture(GLuint tex)
+{
+	this->texture = tex;
+}

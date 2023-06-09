@@ -10,6 +10,7 @@ public:
 	ExTexture(glm::vec3 topRight, glm::vec3 topLeft, glm::vec3 botLeft, glm::vec3 botRight, char* path);
 	~ExTexture();
 	void setTransforms(CameraTransforms cam);
+	void forceChangeTexture(GLuint tex);
 	void draw();
 private:
 	GLuint VAO;
